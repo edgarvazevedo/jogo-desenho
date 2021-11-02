@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+
+    <title>Jogo</title>
+
+   
+  </head>
+  <body>
+    
+    <h1>Qual o desenho?</h1>
+
+    <div class="telaDesenho">
+   <canvas id="tela"></canvas>
+    </div>
+    <div class="container">
+      <div class="row align-items-start">
+        <div class="col">
+
+
+
+
+    Escolha uma cor para desenhar <input id="corTela" type="color">
+
+    
+    <a  href="./index.html"><button type="submit" class="btn btn-success ">Voltar</button></a>
+
+
+
+    <p>Tempo restante!</p>
+    <div id="timer"></div>
+
+    
+
+    <div>
+      <h2>Jogadores</h2>
+      <p id="tela2jogador1">Jogador 1</p>
+      <p id="tela2jogador2">Jogador 2</p>
+    </div>
+        </div>
+
+    
+    <script src="./assets/scripts/segunTela.js"></script>
+
+  </body>
+</html>
+
+
+ <!--
+<div class="d-flex flex-row-reverse bd-highlight">
+  <button id="btn02" type="button" class="btn btn-info">Dicas</button>
+ aqui tem que puxar lá da pagina inicial o que a pessoa colocou no seu objeto, mas tem que sair uma letra aleatoria
+</div>
+-->

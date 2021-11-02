@@ -1,9 +1,15 @@
 
-#tela {
-  width: 700px;
-  height: 700px;
+
+  
+.firstForm {
+  align-items: center;  
+  background-color: rgb(194, 255, 221);
+}
+
+.telaDesenho {
   border: 1px solid;
-  align-items: center;
-  }
+  width: 800px;
+  height: 800px;
+}
 
 
