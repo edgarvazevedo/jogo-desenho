@@ -6,12 +6,7 @@ document.addEventListener("click", (btn02) => {
 })
 
 
- 
-
-
-
- 
-  //  const formData = new FormData(document.querySelector("#myForm"))
+ //  const formData = new FormData(document.querySelector("#myForm"))
     document.getElementById('myForm').addEventListener('submit', element => {
     element.preventDefault()
 
@@ -26,8 +21,13 @@ console.log(element.target)
    
     })
 
-        
 
+
+   
+        
+       
+    
+            
 
 
 

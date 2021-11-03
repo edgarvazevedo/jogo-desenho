@@ -1,6 +1,4 @@
 
-
-  
 .firstForm {
   align-items: center;  
   background-color: rgb(194, 255, 221);
@@ -12,4 +10,18 @@
   height: 800px;
 }
 
+.backgroundModal {
+background-color: rgba(0, 0, 0, 0.541);
+width: 100vw;
+height: 100vh;
+position: fixed;
+top: 0px;
+left: 0px;
+display: none;
+justify-content: center;
+align-items: center;
+}
 
+.backgroundModal.show {
+  display: flex;
+}

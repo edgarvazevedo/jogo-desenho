@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     context.strokeStyle = document.getElementById('color');
     
     
-    //strokeStyle
+   
 
     const desenharLinha = (linha) => {
 
@@ -55,35 +55,49 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function starTimer(duration, display) {
     var timer = duration, minutes, seconds;
+    const modalDePerda = document.getElementById('modalDePerda');
 
     setInterval(function() {
-    minutes = parseInt(timer / 60, 10);
-    seconds = parseInt(timer % 60, 10);
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
 
-    minutes = minutes < 10 ? "0" + minutes : minutes;
-    seconds = seconds < 10 ? "0" + seconds : seconds;
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
 
-    display.textContent = minutes + ":" + seconds; 
+        display.textContent = minutes + ":" + seconds; 
 
-    if(--timer < 0){
-    timer = duration;
-    }
+        if(--timer < 0){
+            modalDePerda.classList.add('show');
+            console.log('rafa guapo');
+            timer = duration;
+        }
 
     }, 1000)
+
+    return timer;
 
     }
 
 
   window.onload = function() {
 
-    const duration = 60 * 1;
+    const duration = 60 * 0.1;
     const display = document.querySelector("#timer");
 
-    starTimer(duration, display);
-    
-   }
+    timer = starTimer(duration, display);
 
 
+    /*const modalDePerda = document.getElementById('modalDePerda')
+     display.addEventListener( 'change', () => {
+            if(timer.minutes == 0 && timer.seconds == 0)
+            modalDePerda.classList.remove('show') 
+    });*/
+
+    }
+// quanto o tempo chegar a 0 sair a imagem que a pessoa 2 perdeu. 
+
+
+   
 
 
         const firstPlayer = document.getElementById('tela2jogador1')
@@ -91,3 +105,12 @@ function starTimer(duration, display) {
 
         const secondPlayer = document.getElementById('tela2jogador2')
         secondPlayer.innerHTML = 'Jogador 2: ' + localStorage.getItem('player2')
+
+
+
+
+        const modalDeVitoria = document.getElementById('modalDeVitoria')
+        const botaoGanhou = document.getElementById('botaoGanhou')
+        botaoGanhou.addEventListener("click", (event) => {
+            modalDeVitoria.classList.add('show') 
+        });
