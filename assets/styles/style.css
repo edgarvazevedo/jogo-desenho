@@ -1,13 +1,17 @@
-
-.firstForm {
-  align-items: center;  
-  background-color: rgb(194, 255, 221);
+body {
+  background-color: rgba(150, 150, 151, 0.781);
 }
+
+
+h1 {
+  text-align: center;
+}
+
 
 .telaDesenho {
   border: 1px solid;
-  width: 800px;
-  height: 800px;
+  width: 600px;
+  height: 600px;
 }
 
 .backgroundModal {
@@ -24,4 +28,11 @@ align-items: center;
 
 .backgroundModal.show {
   display: flex;
+}
+
+#myForm {
+  background-color: rgba(162, 236, 156, 0.842);
+  align-items: center;
+  justify-content: space-between;
+  display:flex;
 }

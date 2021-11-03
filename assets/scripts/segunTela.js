@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const context = tela.getContext('2d')
 
 
-    tela.width = 800;
-    tela.height = 800;
+    tela.width = 600;
+    tela.height = 600;
 
     context.lineWidth = 1;
     context.strokeStyle = document.getElementById('color');
@@ -81,34 +81,30 @@ function starTimer(duration, display) {
 
   window.onload = function() {
 
-    const duration = 60 * 0.1;
+    const duration = 60 * 1;
     const display = document.querySelector("#timer");
 
     timer = starTimer(duration, display);
 
 
-    /*const modalDePerda = document.getElementById('modalDePerda')
-     display.addEventListener( 'change', () => {
-            if(timer.minutes == 0 && timer.seconds == 0)
-            modalDePerda.classList.remove('show') 
-    });*/
-
-    }
-// quanto o tempo chegar a 0 sair a imagem que a pessoa 2 perdeu. 
-
-
    
 
+    }
+  
 
+        //dados primeira tela para a segunda
         const firstPlayer = document.getElementById('tela2jogador1')
-        firstPlayer.innerHTML = 'Jogador 1 : ' + localStorage.getItem('player1')
+        firstPlayer.innerHTML = 'Jogador 1: ' + localStorage.getItem('player1')
 
         const secondPlayer = document.getElementById('tela2jogador2')
         secondPlayer.innerHTML = 'Jogador 2: ' + localStorage.getItem('player2')
 
+        const objeto = document.getElementById('objetotela2')
+        objeto.innerHTML = 'Objeto: ' + localStorage.getItem('objeto')
 
 
 
+        // aparecer imagem 
         const modalDeVitoria = document.getElementById('modalDeVitoria')
         const botaoGanhou = document.getElementById('botaoGanhou')
         botaoGanhou.addEventListener("click", (event) => {
