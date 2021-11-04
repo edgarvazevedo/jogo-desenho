@@ -10,6 +10,6 @@ console.log(element.target)
     localStorage.setItem('player1', myObject.player1)
     localStorage.setItem('player2', myObject.player2)
     localStorage.setItem('objeto', myObject.objeto)
-    window.location.replace("/segundaTela.html") 
+    window.location.replace("/jogo-desenho/segundaTela.html") 
    
 })
