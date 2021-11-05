@@ -68,7 +68,6 @@ function starTimer(duration, display) {
 
         if(--timer < 0){
             modalDePerda.classList.add('show');
-            console.log('rafa guapo');
             timer = duration;
         }
 
@@ -83,13 +82,20 @@ function starTimer(duration, display) {
 
     const duration = 60 * 1;
     const display = document.querySelector("#timer");
+    var adivinhar = "Objeto: ";
+
+    for(var i=0; i<localStorage.getItem('objeto').length; i++) {
+        adivinhar += '*';
+    }
+
+    console.log(adivinhar);
+
+    const objeto = document.getElementById('objetotela2');
+    objeto.innerHTML = adivinhar;
 
     timer = starTimer(duration, display);
 
-
-   
-
-    }
+}
   
 
         //dados primeira tela para a segunda
@@ -99,14 +105,13 @@ function starTimer(duration, display) {
         const secondPlayer = document.getElementById('tela2jogador2')
         secondPlayer.innerHTML = 'Jogador 2: ' + localStorage.getItem('player2')
 
-        const objeto = document.getElementById('objetotela2')
-        objeto.innerHTML = 'Objeto: ' + localStorage.getItem('objeto')
-
 
 
         // aparecer imagem 
         const modalDeVitoria = document.getElementById('modalDeVitoria')
         const botaoGanhou = document.getElementById('botaoGanhou')
         botaoGanhou.addEventListener("click", (event) => {
+            const objeto = document.getElementById('objetotela2');
+            objeto.innerHTML = 'Objeto: ' + localStorage.getItem('objeto');
             modalDeVitoria.classList.add('show') 
         });

@@ -1,6 +1,7 @@
 body {
   font-family: 'Montserrat', sans-serif;
   font-family: 'Roboto', sans-serif;
+  background-color:rgba(5, 255, 172, 0.39);
  }
 
 .container-game {
@@ -19,18 +20,20 @@ h1 {
   border: 2px solid;
   width: 600px;
   height: 600px;
+  background-color: white;
 }
 
 .backgroundModal {
-background-color: rgba(0, 0, 0, 0.541);
-width: 100vw;
-height: 100vh;
-position: fixed;
-top: 0px;
-left: 0px;
-display: none;
-justify-content: center;
-align-items: center;
+  background-color: rgba(0, 0, 0, 0.541);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .backgroundModal.show {
@@ -47,3 +50,4 @@ align-items: center;
   color: rgb(2, 2, 2);
   text-align: center;
 }
+
