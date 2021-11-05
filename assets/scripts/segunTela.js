@@ -1,58 +1,3 @@
-/*document.addEventListener('DOMContentLoaded', () => {
-
-    let pincel = {
-        ativo: false,
-        movendo: false,
-        pos: { x: 0, y: 0 },
-        posAnterior: null
-    }
-
-    const tela = document.getElementById('canvas');
-    const context = tela.getContext('2d')
-
-
-    context.lineWidth = 1;
-    context.strokeStyle = document.getElementById('red');
-    
-    
-   
-
-    const desenharLinha = (linha) => {
-
-        context.beginPath();
-        context.moveTo(pincel.pos.x, pincel.pos.y);
-        reposition(linha)
-        context.lineTo(pincel.pos.x, pincel.pos.y);
-        context.stroke();
-    }
-
-
-    tela.onmousedown = (evento) => {pincel.ativo = true};
-    tela.onmouseup = (evento) => {pincel.ativo = false};
-
-    tela.onmousemove = (evento) => {
-        pincel.movendo = true;
-        reposition (evento)
-        
-    }
-
-    function reposition (event) {
-        pincel.pos.x = event.clientX - canvas.offsetLeft;
-        pincel.pos.y = event.clientY - canvas.offsetTop;
-    }
-
-    const ciclo = () => {
-        if(pincel.ativo && pincel.movendo && pincel.posAnterior) {
-            desenharLinha({pos: pincel.pos, posAnterior: pincel.posAnterior})
-            pincel.movendo = false;
-        }
-        pincel.posAnterior = {x: pincel.pos.x, y:pincel.pos.y}
-
-        setTimeout(ciclo, 10);
-    }
-    ciclo()
-})*/
-
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 let coord = { x: 0, y: 0 };
@@ -83,7 +28,7 @@ function stop() {
 }
 function draw(event) {
   ctx.beginPath();
-  ctx.lineWidth = 5;
+  ctx.lineWidth = 3;
   ctx.lineCap = "round";
   ctx.strokeStyle = "black";
   ctx.moveTo(coord.x, coord.y);
@@ -109,6 +54,8 @@ function starTimer(duration, display) {
 
         if(--timer < 0){
             modalDePerda.classList.add('show');
+            const objeto = document.getElementById('objetotela2');
+            objeto.innerHTML = 'Objeto: ' + localStorage.getItem('objeto');
             timer = duration;
         }
 
@@ -126,7 +73,7 @@ function starTimer(duration, display) {
     var adivinhar = "Objeto: ";
 
     for(var i=0; i<localStorage.getItem('objeto').length; i++) {
-        adivinhar += '*';
+        adivinhar += '@';
     }
 
     console.log(adivinhar);
