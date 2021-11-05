@@ -2,6 +2,8 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-family: 'Roboto', sans-serif;
   background-color:rgba(5, 255, 172, 0.39);
+
+  overflow: hidden;
  }
 
 .container-game {
@@ -22,6 +24,7 @@ h1 {
   height: 600px;
   background-color: white;
 }
+
 
 .backgroundModal {
   background-color: rgba(0, 0, 0, 0.541);
@@ -49,5 +52,11 @@ h1 {
 .instruJogo {
   color: rgb(2, 2, 2);
   text-align: center;
+}
+
+.direita {
+  margin-top: auto;
+  margin-bottom: auto;
+  z-index: 1;
 }
 
